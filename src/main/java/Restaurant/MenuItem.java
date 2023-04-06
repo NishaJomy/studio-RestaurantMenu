@@ -1,3 +1,5 @@
+package Restaurant;
+
 public class MenuItem {
     private String name;
     private Double price;
@@ -6,14 +8,14 @@ public class MenuItem {
     private Boolean isNew;
     private  Boolean isAvailable;
 
-    public menuItem(String name, Double price, String description){
+    public MenuItem(String name, Double price, String description){
         this.name = name;
         this.price = price;
         this.description = description;
         this.category = "main course";
         this.isNew = false;
     }
-    public menuItem(String name, Double price, String description,String category, Boolean isNew){
+    public MenuItem(String name, Double price, String description,String category, Boolean isNew){
         this.name = name;
         this.price = price;
         this.description = description;
@@ -36,7 +38,6 @@ public class MenuItem {
     public void setPrice(Double price) {
         this.price = price;
     }
-
     public String getDescription() {
         return description;
     }
@@ -68,4 +69,7 @@ public class MenuItem {
     public void setAvailable(Boolean available) {
         isAvailable = available;
     }
+
+
+
 }

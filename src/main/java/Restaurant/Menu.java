@@ -1,7 +1,13 @@
+package Restaurant;
+
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Menu {
-    private ArrayList<MenuItem> menuItems = new MenuItem();
+    ArrayList<MenuItem> menuItems = new ArrayList<MenuItem>();
     private Date update;
-    public Menu(){
+
+    public Menu() {
         this.update = new Date();
     }
 
@@ -19,5 +25,6 @@ public class Menu {
 
     public void setUpdate(Date update) {
         this.update = update;
+
     }
 }
