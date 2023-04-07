@@ -27,4 +27,31 @@ public class Menu {
         this.update = update;
 
     }
+
+    public  void addItem(MenuItem menuItem) {
+        this.menuItems.add(menuItem);
+        this.update = new Date();
+
+    }
+    public void removeItem(MenuItem menuItem) {
+        this.menuItems.remove(menuItem);
+        this.update = new Date();
+    }
+
+    @Override
+    public String toString() {
+        String returnString = "";
+        for(MenuItem item: this.menuItems){
+            returnString += item.toString()+"\n\n";
+        }
+
+        return returnString;
+    }
+
+
+
+
+
+
+
 }

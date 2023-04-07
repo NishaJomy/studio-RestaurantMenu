@@ -4,18 +4,19 @@ public class MenuItem {
     private String name;
     private Double price;
     private String description;
-    private String  category;
+    private String category;
     private Boolean isNew;
-    private  Boolean isAvailable;
+    private Boolean isAvailable;
 
-    public MenuItem(String name, Double price, String description){
+    public MenuItem(String name, Double price, String description) {
         this.name = name;
         this.price = price;
         this.description = description;
         this.category = "main course";
         this.isNew = false;
     }
-    public MenuItem(String name, Double price, String description,String category, Boolean isNew){
+
+    public MenuItem(String name, Double price, String description, String category, Boolean isNew) {
         this.name = name;
         this.price = price;
         this.description = description;
@@ -38,6 +39,7 @@ public class MenuItem {
     public void setPrice(Double price) {
         this.price = price;
     }
+
     public String getDescription() {
         return description;
     }
@@ -70,6 +72,33 @@ public class MenuItem {
         isAvailable = available;
     }
 
+    @Override
+    public String toString() {
+        String str = "";
+        str += "Name: " + this.name + "\n";
+        str += "price: " + this.price + "\n";
+        str += "description: " + this.description + "\n";
+        str += "category: " + this.category + "\n";
+        return str;
+    }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) return true;
+        if (!(obj instanceof MenuItem)) {
+            return false;
+        }
+        MenuItem menuItem = (MenuItem) obj;
+        if (menuItem.name.equals(this.name)
+                && menuItem.price.equals(this.price)
+                && menuItem.description.equals(this.description)
+                && menuItem.category.equals(this.category)) {
+            return true;}
+            else
+            return false;
 
+    }
 }
+
+
+
